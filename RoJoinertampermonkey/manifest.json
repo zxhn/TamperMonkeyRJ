@@ -1,0 +1,28 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "RoJoiner",
+  "manifest_version": 3,
+  "version": "0.4",
+  "description": "Join any Roblox player with only their username.",
+  "icons": {
+    "16": "images/roblox.png",
+    "32": "images/roblox.png",
+    "48": "images/roblox.png",
+    "128": "images/roblox.png"
+  },
+  "permissions": ["scripting", "cookies"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://*.roblox.com/*"],
+  "web_accessible_resources": [{
+    "resources": [
+      "images/*.png",
+      "styles.css",
+      "content.js",
+      "load.js",
+      "panel.html"
+    ],
+    "matches": ["https://*.roblox.com/*"]
+  }]
+}
